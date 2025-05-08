@@ -28,9 +28,9 @@ def run_local_llm(instruction, target_text):
     )
     end_time = time.time()
     response["time"] = end_time - start_time
-    print(colored(type(response), "red"))
-    print(colored(response, "green"))
-    print(colored(response["response"]["message"]["content"], "cyan"))
+    # print(colored(type(response), "red"))
+    # print(colored(response, "green"))
+    # print(colored(response["response"]["message"]["content"], "cyan"))
 
     return response["response"]["message"]["content"]
 

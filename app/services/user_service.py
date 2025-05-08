@@ -11,9 +11,9 @@ async def checkUser(token: str, settings: Settings):
     # authorized_user=r.post(url=settings.DOMAIN_NAME,data={"token":token})
     # return authorized_user==True
     if token == "abc123token":
-        print(colored(True, "green"))
+        print(colored("Authorized", "green"))
         return True
     else:
-        print(colored(False, "red"))
+        print(colored("Un-authorized", "red"))
         return False
     return TRUE

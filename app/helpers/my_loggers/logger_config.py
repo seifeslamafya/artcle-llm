@@ -2,16 +2,16 @@
 import logging
 
 # Configure logger
-logger = logging.getLogger("my_logger")
+logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 
 # File handler
-file_handler = logging.FileHandler("app.log")
+file_handler = logging.FileHandler("app.log", mode="a")
 file_handler.setLevel(logging.INFO)
 
 # Formatter
 formatter = logging.Formatter(
-    "%(asctime)s - %(levelname)s - %(client_ip)s - %(func_name)s - %(status_code)s - %(message)s"
+    fmt="%(asctime)s - %(levelname)s - %(client_ip)s - %(func_name)s - %(status_code)s - %(message)s"
 )
 file_handler.setFormatter(formatter)
 
